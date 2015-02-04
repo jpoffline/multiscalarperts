@@ -206,6 +206,52 @@ P^{\rho\sigma} = -  \gamma^{\rho\sigma}\ld+  \fid{\mathbb{A}}{IJ} \gamma^{\mu\rh
 \ese
 Note, for a non-zero heat-flux contribution to the energy-momentum tensor we require $\fid{\mathbb{A}}{IJ}\fiu{\mathbb{Y}}{J}\neq 0$. The construction, or rather the isolation of, such a  theory is what concerns us next.
 
+
+\section{Scalars formed from the kinetic matrix}
+In the same way that we are prejudiced against     Lorentz indices floating without a contracting partner, we can also ask that no ``field''-type indices are left floating without a corresponding partner. What this means, for example, is that a corresponding Lagrangian can't be a function of $\fiu{\phi}{I}$-alone, but instead of quantities like $\fiu{\phi}{I}\fid{\phi}{I}$.
+
+In order to move the field-type indices we are forced to introduce some rank-2 symmetric tensor, $\fid{G}{IJ}$, say which plays the role of a metric in the sense that it raises and lowers indices (although dosen't nessecarily come with all the additional properties that the space-time metric also has).
+
+
+\subsection{Lorentz invariant case}
+
+There is a maximum number of independent scalar combinations one can form out of the kinetic matrix alone. The Cayley-Hamilton theorem tells us that if there are $q$-scalars then there are $q$-scalar combinations of $\fiu{X}{IJ}$  one can form, since $\fiu{X}{IJ}$ is a $q\times q$ symmetric matrix. A few of these are
+\bea
+[\rbm{X}] \defn \fiu{X}{I}{}\fid{}{I} = \fid{G}{IJ}\fiu{X}{IJ},\qquad [\rbm{X}^2]\defn {\fiu{X}{IJ}}\fid{X}{IJ} =\fid{G}{IK}\fid{G}{JL}\fiu{X}{IJ}\fiu{X}{KL}
+\eea
+We will  denote the traces as
+\bea
+I_{[n]} \defn [\rbm{X}^n],
+\eea
+and so the Lagrangian density for $q$-scalars is a $q$-variate function,
+\bea
+\ld = \ld(I_{[1]}, \ldots, I_{[q]}).
+\eea
+The derivatives of a few of these, with respect to the components of the kinetic-matrix, are
+\bea
+\pd{I_{[1]}}{\fiu{X}{IJ}} =\fid{G}{IJ},\qquad  \pd{I_{[2]}}{\fiu{X}{IJ}} = 2 \fid{X}{IJ} = 2\fid{G}{IK}\fid{G}{JL}\fiu{X}{KL}.
+\eea
+\bea
+\fid{A}{IJ} =\sum_{n=1}^q\alpha_{[n]}\pd{I_{[n]}}{\fiu{X}{IJ}} ,\qquad \alpha_{[n]} \defn  \pd{\ld}{I_{[n]}}.
+\eea
+
+\subsection{Lorentz violating case}
+The kinetic matrix and vector in the Lorentz violating case can also be used to form scalars; a relevant list is of the form
+\bea
+\mathbb{X}^I{}_{I}\qquad \fiu{\mathbb{X}}{IJ}\mathbb{X}{}_{IJ},\qquad \fiu{\mathbb{X}}{IJ}\mathbb{X}^K{}_{J}\mathbb{X}{}_{KI},\qquad \ldots, \qquad  \fiu{\mathbb{X}}{IJ}\mathbb{Y}{}_I \mathbb{Y}{}_J ,\qquad \fiu{\mathbb{Y}}{I}\mathbb{Y}{}_I.
+\eea
+The ``$\ldots$'' stands for the  list of possible (and unique) higher-order terms in contractions of $\mathbb{X}{}_{IJ}$; one should note that there are only $n$ unique terms of this kind for $n$ scalars.
+
+
+
+\section{Lagrangian for perturbations}
+The Lagrangian for perturbations of a theory which contains an arbitrary number of scalars, $\fiu{\phi}{I}$, their space-time derivatives $\nabla_{\mu}\fiu{\phi}{I}$, and the metric is given by
+\bea
+\sol &=& \mathcal{A}_{IJ} \lp\fiu{\phi}{I} \lp\fiu{\phi}{J} + {\mathcal{B}^{\mu}}_{IJ}\lp\phi ^I \nabla_{\mu}\lp \fiu{\phi}{J} + {\mathcal{C}^{\mu\nu}}_{IJ} \nabla_{\mu}\lp \fiu{\phi}{I}\nabla_{\nu}\lp\fiu{\phi}{J}\nonumber\\
+&& + {\mathcal{E}^{\mu\nu}}_I\lp\fiu{\phi}{I} \lp g_{\mu\nu} + {\mathcal{D}^{\mu\alpha\beta}}_I\nabla_{\mu}\lp\fiu{\phi}{I} \lp g_{\alpha\beta} + \mathcal{F}^{\mu\nu\alpha\beta}\lp g_{\mu\nu}\lp g_{\alpha\beta}.
+\eea
+There are six ``classes'' of coupling-tensors here: $\{ \mathcal{A}_{IJ}, \ldots, \mathcal{F}^{\mu\nu\alpha\beta}\}$. 
+
 \section{Erecting orthogonal scalars into a hyper-elastic system}
 Here we show how to set the system up so that it contains a hyper-elastic system. These are systems which contain two ``classes'' of scalars: the first is a set of scalars which have time-like derivatives only, and the second which have vanishing time-like derivatives. The former are of the type considered in $k$-essence categories, and the latter are of the type considered in elastic solid models.
 
@@ -246,7 +292,11 @@ Our focus will be on the case where the the ``first set'' of scalars, $\phi^{\ba
 u^{\mu}\nabla_{\mu}\phi^{\hat{I}} = 0.
 \eea
 \ese
-The second condition is equivalent to setting $\lied{u} \phi^{\hat{I}} = 0$. This sets  $\mathbb{Y}^{\hat{I}} =0$ and   $\mathbb{B}^{\hat{I}} =0$ in (\ref{split-eng-b}) and (\ref{split-eng-d}) respectively. Combining the conditions allows us to evaluate the expressions for the components of the energy-momentum tensor, (\ref{emtfluid-var-lv}),
+The second condition is equivalent to demanding the vanishing of the Lie derivative along the time-like direction, $\lied{u} \phi^{\hat{I}} = 0$. 
+
+This sets  $\mathbb{Y}^{\hat{I}} =0$ and   $\mathbb{B}^{\hat{I}} =0$ in (\ref{split-eng-b}) and (\ref{split-eng-d}) respectively. 
+
+Combining the conditions allows us to evaluate the expressions for the components of the energy-momentum tensor, (\ref{emtfluid-var-lv}),
 \bse
 \bea
 \rho= \ld +  \mathbb{B}_{\bar{I}}\mathbb{Y}^{\bar{I}} + \mathbb{A}_{\bar{I}\bar{J}} \mathbb{Y}^{\bar{I}} \mathbb{Y}^{\bar{J}},
@@ -260,43 +310,11 @@ P^{\rho\sigma} = -  \gamma^{\rho\sigma}\ld+  \fid{\mathbb{A}}{\hat{I}\hat{J}} \g
 \ese
 What these show us, for example, is that it is the $\phi^{\bar{I}}$-fields which causes the energy-density not to be specified purely in terms of the Lagrangian density. Also, the deviation of the pressure from being simply determined by the Lagrangian is caused by the $\fiu{\phi}{\hat{I}}$-fields.
 
+\subsection{barred scalar is a singlet}
+\bea
+\fiu{\phi}{I} = \left(\phi^{0}, \phi^{\hat{I}}\right)
+\eea
 
-\section{Scalars formed from the kinetic matrix}
-In the same way that we are prejudiced against     Lorentz indices floating without a contracting partner, we can also ask that no ``field''-type indices are left floating without a corresponding partner. What this means, for example, is that a corresponding Lagrangian can't be a function of $\fiu{\phi}{I}$-alone, but instead of quantities like $\fiu{\phi}{I}\fid{\phi}{I}$.
-
-In order to move the field-type indices we are forced to introduce some rank-2 symmetric tensor, $\fid{G}{IJ}$, say which plays the role of a metric in the sense that it raises and lowers indices (although dosen't nessecarily come with all the additional properties that the space-time metric also has).
-
-
-\subsection{Lorentz invariant case}
-
-There is a maximum number of independent scalar combinations one can form out of the kinetic matrix alone. The Cayley-Hamilton theorem tells us that if there are $q$-scalars then there are $q$-scalar combinations of $\fiu{X}{IJ}$  one can form, since $\fiu{X}{IJ}$ is a $q\times q$ symmetric matrix. A few of these are
-\bea
-[\rbm{X}] \defn \fiu{X}{I}{}\fid{}{I} = \fid{G}{IJ}\fiu{X}{IJ},\qquad [\rbm{X}^2]\defn {\fiu{X}{IJ}}\fid{X}{IJ} =\fid{G}{IK}\fid{G}{JL}\fiu{X}{IJ}\fiu{X}{KL}
-\eea
-We will  denote the traces as
-\bea
-I_{[n]} \defn [\rbm{X}^n],
-\eea
-and so the Lagrangian density for $q$-scalars is a function with $q$-arguments:
-\bea
-\ld = \ld(I_{[1]}, \ldots, I_{[q]}).
-\eea
-\bea
-\pd{I_{[1]}}{\fiu{X}{IJ}} =\fid{G}{IJ},\qquad  \pd{I_{[2]}}{\fiu{X}{IJ}} = 2 \fid{X}{IJ} = 2\fid{G}{IK}\fid{G}{JL}\fiu{X}{KL}.
-\eea
-\subsection{Lorentz violating case}
-The kinetic matrix and vector in the Lorentz violating case can also be used to form scalars; a relevant list is of the form
-\bea
-\mathbb{X}^I{}_{I}\qquad \fiu{\mathbb{X}}{IJ}\mathbb{X}{}_{IJ},\qquad \fiu{\mathbb{X}}{IJ}\mathbb{X}^K{}_{J}\mathbb{X}{}_{KI},\qquad \ldots, \qquad  \fiu{\mathbb{X}}{IJ}\mathbb{Y}{}_I \mathbb{Y}{}_J ,\qquad \fiu{\mathbb{Y}}{I}\mathbb{Y}{}_I.
-\eea
-The ``$\ldots$'' stands for the  list of possible (and unique) higher-order terms in contractions of $\mathbb{X}{}_{IJ}$; one should note that there are only $n$ unique terms of this kind for $n$ scalars.
-\section{Lagrangian for perturbations}
-The Lagrangian for perturbations of a theory which contains an arbitrary number of scalars, $\fiu{\phi}{I}$, their space-time derivatives $\nabla_{\mu}\fiu{\phi}{I}$, and the metric is given by
-\bea
-\sol &=& \mathcal{A}_{IJ} \lp\fiu{\phi}{I} \lp\fiu{\phi}{J} + {\mathcal{B}^{\mu}}_{IJ}\lp\phi ^I \nabla_{\mu}\lp \fiu{\phi}{J} + {\mathcal{C}^{\mu\nu}}_{IJ} \nabla_{\mu}\lp \fiu{\phi}{I}\nabla_{\nu}\lp\fiu{\phi}{J}\nonumber\\
-&& + {\mathcal{E}^{\mu\nu}}_I\lp\fiu{\phi}{I} \lp g_{\mu\nu} + {\mathcal{D}^{\mu\alpha\beta}}_I\nabla_{\mu}\lp\fiu{\phi}{I} \lp g_{\alpha\beta} + \mathcal{F}^{\mu\nu\alpha\beta}\lp g_{\mu\nu}\lp g_{\alpha\beta}.
-\eea
-There are six ``classes'' of coupling-tensors here: $\{ \mathcal{A}_{IJ}, \ldots, \mathcal{F}^{\mu\nu\alpha\beta}\}$. 
 \appendix
 \section{Appendix}
 \bse
