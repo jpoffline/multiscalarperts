@@ -1,0 +1,325 @@
+\documentclass[amsmath,amssymb,12pt,eqsecnum]{article}
+\usepackage{ graphicx, amsmath, amsmath, amssymb, subfigure}
+\input{defs}
+\newcommand{\comment}[1]{{\color{red}[#1]}}
+\newcommand{\note}[1]{{\color{blue}#1}}
+\newcommand{\todo}[1]{{\color{blue}#1}}
+\newcommand{\fiu}[2]{#1^{\scriptsize\rm #2 }}
+\newcommand{\fid}[2]{#1_{\rm #2 }}
+
+\newcommand{\stmanif}[0]{\mathcal{S}}
+\newcommand{\fmanif}[0]{\mathcal{M}}
+
+\usepackage{mathrsfs}
+\usepackage[breaklinks, colorlinks, citecolor=blue]{hyperref}
+\linespread{1}
+
+
+\begin{document}
+\title{\vspace{-4cm}Hyper-elasticity as a multi-scalar theory}
+\author{\sc{Jonathan A. Pearson\footnote{E-mail: \href{mailto:j.pearson@nottingham.ac.uk}{j.pearson@nottingham.ac.uk}}}\\ \\ \it{School of Physics \& Astronomy},\\  \it{University of Nottingham} \\ \it{Nottingham, NG7 2RD} }
+
+\date{\today}
+
+
+
+\maketitle
+
+\begin{abstract}
+In this paper we point out how the framework of Carter's hyper-elasticity theory can be recovered from a Lorentz violating multi-scalar theory. Our particular approach is also useful at concreting the role of classes of fields, in terms of their allowed dependencies, in the sources of the gravitational field equations.
+\end{abstract}
+%\tableofcontents
+
+\section{Introduction}
+The observation of cosmic acceleration has brought with it a resurgence in models that can be broadly catgeorised in one of two senses. The first is that they provide some dynamics to ``dark energy'', which is usually modelled as a scalar field whose evolution is controlled by some ``chosen'' potential or set of kinetic terms. The second is that of a gravity theory which is distinct from General Relativity.
+
+We consider a theory with an arbitrary number of scalars, $\fiu{\phi}{I}$, and their (first) space-time derivatives, $\nabla_{\mu}\fiu{\phi}{I}$. We will isolate different classes of terms in the energy-momentum tensor, by which we mean understand whether various allowed terms in the theory give rise to energy-density, heat-flux, or pressure-tensor type contributions to $T_{\mu\nu}$. This is achieved by computing the energy-momentum tensor for the given theory, and comparing with the standard decomposition
+\bea
+T_{\mu\nu} = \rho u_{\mu}u_{\nu} + 2 q_{(\mu}u_{\nu)} + P_{\mu\nu},
+\eea
+in which the following orthognality and normality conditions are implied:
+\bea
+u^{\mu}u_{\mu} = -1,\qquad u^{\mu}q_{\mu}=0,\qquad u^{\mu} P_{\mu\nu} = 0.
+\eea
+The analysis is performed for the case where the Lagrangian is formed out of Lorentz invariant and Lorentz violating combinations.
+
+The scalars $\fiu{\phi}{I}$ can be viewed as (and indeed,  ``are'')  a map that takes a point in the space-time manifold, $\stmanif$, and returns a point in some ``field manifold'', $\fmanif$. The sensible way of writing this down is
+\bea
+\phi : \stmanif\longrightarrow \fmanif.
+\eea
+
+
+\section{The multi-scalar theory}
+We will construct the most general Lagrangians out of the fields
+\bea
+\label{field-content-general}
+\ld = \ld(\fiu{\phi}{I}, \nabla_{\mu}\fiu{\phi}{I}, u_{\mu}, \gamma_{\mu\nu}),
+\eea
+where $u_{\mu}$ and $\gamma_{\mu\nu}$ are  time-like unit vector and spatial metric. 
+\subsection{Lorentz invariant theory}
+Lorentz invariant theories are contained within the general case (\ref{field-content-general}) by  only considering the particular combination $g_{\mu\nu} = \gamma_{\mu\nu} - u_{\mu}u_{\nu}$, where $g_{\mu\nu}$ is the space-time metric. In this Lorentz invariant case, the field content is of the form
+\bea
+\ld = \ld(\fiu{\phi}{I}, \nabla_{\mu}\fiu{\phi}{I}, g_{\mu\nu}).
+\eea
+We must now contract all available Lorentz indices (i.e., the greek ones) in all possible ways. In this case there is only one allowed scalar, the Lorentz invariant kinetic matrix defined via
+\bea
+\label{eq:LI-kin-mat}
+ \fiu{X}{IJ} \defn - \half g^{\mu\nu} \nabla_{\mu}\fiu{\phi}{I} \nabla_{\nu}\fiu{\phi}{J}.
+\eea
+The indices on the kinetic matrix are symmetric by virtue of the symmetry of the space-time metric.
+Hence, the theory which respects Lorentz invariance has a bi-variate Lagrangian given by
+\bea
+\ld = \ld(\fiu{\phi}{I},   \fiu{X}{IJ}).
+\eea
+
+The variation of $\fiu{X}{IJ}$ is 
+\bea
+\delta \fiu{X}{IJ} = \half \nabla^{\mu}\fiu{\phi}{I} \nabla^{\nu}\fiu{\phi}{J} \delta g_{\mu\nu} - \nabla^{\mu}\fiu{\phi}{I} \nabla_{\mu}\delta\fiu{\phi}{J},
+\eea
+and in what follows it is convenient to define the following derivatives of the Lagrangian,
+\bea
+\fid{A}{IJ} \defn \pd{\ld}{\fiu{X}{IJ}},\qquad \fid{C}{I} \defn \pd{\ld}{\fiu{\phi}{I}}.
+\eea
+These expressions help us to write down a compact form of the measure-weighted variation of the Lagrangian:
+\bea
+\label{eq:sec:dL-hskjds-1}
+\Diamond \ld = \fid{\mathcal{E}}{I}\delta\fiu{\phi}{I}+   \tfrac{1}{2}  T^{\mu\nu}\delta g_{\mu\nu} -\nabla_{\mu}\left(\fid{\vartheta^{\nu}}{I}\delta\fiu{\phi}{I}\right),
+\eea
+in which we isolated the on-shell equation of motion-term of the scalars,
+\bse
+\bea
+\label{LIV-foud-01}
+\fid{\mathcal{E}}{J} \defn   \nabla_{\mu}\left( \fid{A}{IJ} \nabla^{\mu}\fiu{\phi}{I}\right)+ \fid{C}{J}  ,
+\eea
+ the energy-momentum tensor,
+\bea
+\label{LIV-foud-1}
+T^{\mu\nu} = \fid{A}{IJ}\nabla^{\mu}\fiu{\phi}{I} \nabla^{\nu}\fiu{\phi}{J} - \ld g^{\mu\nu},
+\eea
+and the surface current,
+\bea
+\fid{\vartheta^{\nu}}{J} \defn   \fid{A}{IJ} \nabla^{\mu}\fiu{\phi}{I}  .
+\eea
+\ese
+Note that (\ref{LIV-foud-1}) coincides exactly with the energy-momentum tensor which would be computed via the usual expression
+\bea
+\label{eq:emt-defn-how-to-comp}
+T^{\mu\nu} = 2\frac{\delta \ld}{\delta g_{\mu\nu}} - \ld g^{\mu\nu},
+\eea
+and is of precisely the same form as the energy-momentum tensor one obtains for non-canonical scalar field theory.
+
+
+In the simpler case where the Lagrangian is symmetric under constant shifts in $\fiu{\phi}{I}$, the equation of motion of the $\fiu{\phi}{I}$'s is
+\bea
+\left(\fid{A}{IJ} g^{\mu\alpha} - \fid{D}{IJKL}\nabla^{\mu}\fiu{\phi}{I}\nabla^{\alpha}\fiu{\phi}{K} \right)\nabla_{\mu}   \nabla_{\alpha}\fiu{\phi}{L}=0,
+\eea
+in which
+\bea
+\fid{D}{IJKL} \defn  \ld_{,\fiu{X}{IJ}\fiu{X}{KL}},\qquad \fid{E}{IJK} \defn \ld_{,\fiu{X}{IJ}\fiu{\phi}{K}}.
+\eea
+\subsection{Breaking Lorentz invariance}
+The kinetic matrix $\fiu{X}{IJ}$ we defined in (\ref{eq:LI-kin-mat}) explicitly assumed  Lorentz invariance; this is observed by our useage of the metric tensor $g^{\mu\nu}$ in the contraction of the indices on the space-time covariant derivatives. Instead, suppose use the time-like unit vector $u^{\mu}$ and orthogonal spatial metric $\gamma_{\mu\nu}$ as the ``fundamental'' index-contractors. Thus, we find that there are two classes of allowed scalars,
+\bse
+\bea
+\label{eq:def-X-IJ}
+\fiu{\mathbb{X}}{IJ} \defn - \tfrac{1}{2} \gamma^{\mu\nu}\nabla_{\mu}\fiu{\phi}{I} \nabla_{\nu}\fiu{\phi}{J},
+\eea
+\bea
+\label{eq:def-Yi}
+\fiu{\mathbb{Y}}{I} \defn \tfrac{1}{\sqrt{2}} u^{\mu}\nabla_{\mu}\fiu{\phi}{I}.
+\eea
+\ese
+Note that $\fiu{\mathbb{Y}}{I}$ corresponds to a vector which only contains the time-like derivatives of the $\fiu{\phi}{I}$, and $\fiu{\mathbb{X}}{IJ}$ is the matrix of spatial derivatives only. One can  interpret (\ref{eq:def-Yi}) in terms of the Lie derivative of the scalar $\fiu{\phi}{I}$ along the time-like direction and indeed as the push-forward of $u^{\mu}$ via the map $\fiu{\phi}{I}$,
+\bea
+\fiu{\mathbb{Y}}{I} = \tfrac{1}{\sqrt{2}} \lied{u}\fiu{\phi}{I} =  \tfrac{1}{\sqrt{2}}  \phi_{\star}u^{\mu}.
+\eea
+Similarly, (\ref{eq:def-X-IJ}) can be interpreted as the push-forward of $\gamma^{\mu\nu}$ to a manifold, implemented by using the $\fiu{\phi}{I}$ as the relevant map;
+\bea
+\fiu{\mathbb{X}}{IJ} = - \tfrac{1}{2} \phi_{\star}\gamma^{\mu\nu}.
+\eea
+Note that for the particular contraction $\mathbb{Y}_I\fiu{\mathbb{X}}{IJ}$ to be non-zero, the $\qsuprm{I}{th}$ field would be required simultaneously to have non-zero time-like and  space-like derivatives.  This would hold if the orthogonality of $u^{\mu}$ and $\gamma_{\mu\nu}$ is preserved by the map implemented by $\phi$. We will see later on that preservation of this orthogonality has the consequence of switching off heat-flux, with the converse also holding true.
+
+Then we set the Lagrangian to be dependent upon
+\bea
+\label{LV-lag}
+\ld =\ld \left(\fiu{\mathbb{X}}{IJ} ,\fiu{\mathbb{Y}}{I} , \fiu{\phi}{I} \right).
+\eea
+The Lorentz invariant kinetic matrix (\ref{eq:LI-kin-mat}) is recovered when
+\bea
+\fiu{X}{IJ} = \fiu{\mathbb{X}}{IJ}- \fiu{\mathbb{Y}}{I} \fiu{\mathbb{Y}}{J}
+\eea
+is the only combination appearing in the theory. This bears great resemblance to the familiar decomposition
+\bea
+g_{\mu\nu} = \gamma_{\mu\nu} - u_{\mu}u_{\nu}
+\eea
+of the space-time metric into two (in this particular instance of the metric, mutually orthogonal) pieces. For notational ease we set the derivatives of the Lagrangian with respect to each of the kinetic matrix, $\fiu{\mathbb{X}}{IJ}$, and vector, $\fiu{\mathbb{Y}}{I}$, via 
+\bea
+\label{eq:sec:A-scr-defn}
+\fid{\mathbb{A}}{IJ}\defn   \pd{\ld}{\fiu{\mathbb{X}}{IJ} },\qquad \fid{\mathbb{B}}{I} \defn   \pd{\ld}{\fiu{\mathbb{Y}}{I}},\qquad \fid{\mathbb{C}}{I} \defn   \pd{\ld}{\fiu{\phi}{I}}.
+\eea
+In the particular instance when $\fiu{\mathbb{X}}{IJ}\fid{\mathbb{Y}}{I}=0$, it follows that $\fid{\mathbb{A}}{IJ}\fiu{\mathbb{Y}}{I}=0$.
+
+The first variations of the Lorentz violating kinetic matrix and vector are given by
+\bse
+\bea
+\delta \fiu{\mathbb{X}}{IJ}  =  -   \gamma^{\mu\nu} \nabla_{\mu}\phi^{(I} \nabla_{\nu}\delta \phi^{J)} + \tfrac{1}{2}  \nabla_{\mu}\fiu{\phi}{I} \nabla_{\nu}\fiu{\phi}{J}\left( g^{\mu\alpha}g^{\beta\nu} + u^{\mu}u^{\nu}u^{\alpha}u^{\beta}\right)\delta g_{\alpha\beta} ,
+\eea
+\bea
+\delta  \fiu{\mathbb{Y}}{I} = \tfrac{1}{2 }  \fiu{\mathbb{Y}}{I} u^{\alpha}u^{\beta}   \delta g_{\alpha\beta} + \tfrac{1}{\sqrt{2}}u^{\mu}\nabla_{\mu}\delta \fiu{\phi}{I}.
+\eea
+\ese
+The measure-weighted variation in the Lagrangian (\ref{LV-lag}) can be written in compact form as
+\bea
+\Diamond\ld = \fid{\mathcal{E}}{I}\delta\fiu{\phi}{I}+\tfrac{1}{2 }   T^{\alpha\beta} \delta g_{\alpha\beta}  -\nabla_{\nu}\left(\fid{\vartheta^{\nu}}{J} \delta \fiu{\phi}{J}\right),
+\eea
+in which, in analogue with (\ref{LIV-foud-01}), the on-shell equation of motion is 
+\bea
+\fid{\mathcal{E}}{J} \defn  \fid{\mathbb{C}}{J}+  \nabla_{\nu}\left(\fid{\mathbb{A}}{IJ}  \gamma^{\mu\nu} \nabla_{\mu}\fiu{\phi}{I}\right) - \tfrac{1}{\sqrt{2}}\nabla_{\mu}\left(u^{\mu}\fid{\mathbb{B}}{J}\right)  ,
+\eea
+ the energy-momentum tensor is given by
+\bea
+\label{LV-emt-1dsjhksj-1}
+T^{ \alpha\beta} &=&  \fid{\mathbb{A}}{IJ}\gamma^{\mu\alpha}\gamma^{\beta\nu} \nabla_{\mu}\fiu{\phi}{I} \nabla_{\nu}\fiu{\phi}{J}- 2\sqrt{2}\fiu{\mathbb{Y}}{J} \fid{\mathbb{A}}{IJ}u^{(\alpha}\gamma^{\beta)\mu}   \nabla_{\mu}\fiu{\phi}{I} \nonumber\\
+&&\qquad \qquad +  \fiu{\mathbb{Y}}{I}\left( \fid{\mathbb{B}}{I}+ \fid{\mathbb{A}}{IJ} \fiu{\mathbb{Y}}{J}      \right)u^{\alpha}u^{\beta} - g^{ \alpha\beta}\ld,
+\eea
+and the surface current is
+\bea
+\fid{\vartheta^{\nu}}{J} \defn \fid{\mathbb{A}}{IJ}  \gamma^{\mu\nu} \nabla_{\mu}\phi^{I} -  \tfrac{1}{\sqrt{2}} \fid{\mathbb{B}}{J}u^{\nu}.
+\eea
+
+
+
+Projecting the energy-momomentum tensor (\ref{LV-emt-1dsjhksj-1})   with the relevant projectors reveals the energy-density, heat flux, and pressure tensors:
+\bse
+\label{emtfluid-var-lv}
+\bea
+\label{eq:sec:emt-dens-2}
+\rho=\ld+    \fid{\mathbb{B}}{I} \fiu{\mathbb{Y}}{I} +\fid{\mathbb{A}}{IJ}\fiu{\mathbb{Y}}{I}  \fiu{\mathbb{Y}}{J}        ,
+\eea
+\bea
+\label{eq:sec:emt-heat-1}
+q^{\mu}= - \sqrt{2} \fid{\mathbb{A}}{IJ}\fiu{\mathbb{Y}}{J}  \gamma^{\mu\alpha}   \nabla_{\alpha}\fiu{\phi}{I}  ,
+\eea
+\bea
+P^{\rho\sigma} = -  \gamma^{\rho\sigma}\ld+  \fid{\mathbb{A}}{IJ} \gamma^{\mu\rho}\gamma^{\sigma\nu} \nabla_{\mu}\fiu{\phi}{I} \nabla_{\nu}\fiu{\phi}{J}.
+\eea
+\ese
+Note, for a non-zero heat-flux contribution to the energy-momentum tensor we require $\fid{\mathbb{A}}{IJ}\fiu{\mathbb{Y}}{J}\neq 0$. The construction, or rather the isolation of, such a  theory is what concerns us next.
+
+\section{Erecting orthogonal scalars into a hyper-elastic system}
+Here we show how to set the system up so that it contains a hyper-elastic system. These are systems which contain two ``classes'' of scalars: the first is a set of scalars which have time-like derivatives only, and the second which have vanishing time-like derivatives. The former are of the type considered in $k$-essence categories, and the latter are of the type considered in elastic solid models.
+
+
+
+First, suppose that the set of scalars $\fiu{\phi}{I}$ splits into two orthogonal subsets,
+\bea
+\fiu{\phi}{I} = \left(\phi^{\bar{I}}, \phi^{\hat{I}}\right),\qquad \phi^{\bar{I}}\phi_{\hat{I}} = 0.
+\eea
+Any ``hatted''-index is orthogonal to any ``barred''-index in the sense defined above.
+This splitting of the set of scalar engenders the splittings of the kinetic matrix,
+\bse
+\bea
+\fiu{\mathbb{X}}{IJ} = \mathbb{X}^{\bar{I}\bar{J}} + 2 \mathbb{X}^{(\bar{I}\hat{J})} + \mathbb{X}^{\hat{I}\hat{J}},
+\eea
+the kinetic vector,
+\bea
+\label{split-eng-b}
+\fiu{\mathbb{Y}}{I} = \mathbb{Y}^{\bar{I}} + \mathbb{Y}^{\hat{I}} ,
+\eea
+ the set of derivatives $\mathbb{A}^{IJ} $ defined in the first of (\ref{eq:sec:A-scr-defn}),
+\bea
+\mathbb{A}^{IJ} = \mathbb{A}^{\bar{I}\bar{J}} + 2 \mathbb{A}^{(\bar{I}\hat{J})} + \mathbb{A}^{\hat{I}\hat{J}},
+\eea
+and finally $\mathbb{B}^{I}$ as defined in the second of (\ref{eq:sec:A-scr-defn}),
+\bea
+\label{split-eng-d}
+\mathbb{B}^{I} = \mathbb{B}^{\bar{I}} + \mathbb{B}^{\hat{I}} ,
+\eea
+\ese
+
+Our focus will be on the case where the the ``first set'' of scalars, $\phi^{\bar{I}}$ only have time-like derivatives and the ``last set'' of scalars, $\phi^{\hat{I}}$, have vanishing   derivatives in the time-like direction,
+\bse
+\bea
+\nabla_{\mu}\phi^{\bar{I}} = - u_{\mu}\dot{\phi}^{\bar{I}},
+\eea
+\bea
+u^{\mu}\nabla_{\mu}\phi^{\hat{I}} = 0.
+\eea
+\ese
+The second condition is equivalent to setting $\lied{u} \phi^{\hat{I}} = 0$. This sets  $\mathbb{Y}^{\hat{I}} =0$ and   $\mathbb{B}^{\hat{I}} =0$ in (\ref{split-eng-b}) and (\ref{split-eng-d}) respectively. Combining the conditions allows us to evaluate the expressions for the components of the energy-momentum tensor, (\ref{emtfluid-var-lv}),
+\bse
+\bea
+\rho= \ld +  \mathbb{B}_{\bar{I}}\mathbb{Y}^{\bar{I}} + \mathbb{A}_{\bar{I}\bar{J}} \mathbb{Y}^{\bar{I}} \mathbb{Y}^{\bar{J}},
+\eea
+\bea
+q^{\mu}=- \sqrt{2} \mathbb{A}_{\hat{I}\bar{J}} \mathbb{Y}^{\bar{J}}\gamma^{\mu\nu}\nabla_{\nu}\phi^{\hat{I}}.
+\eea
+\bea
+P^{\rho\sigma} = -  \gamma^{\rho\sigma}\ld+  \fid{\mathbb{A}}{\hat{I}\hat{J}} \gamma^{\mu\rho}\gamma^{\sigma\nu} \nabla_{\mu}\fiu{\phi}{\hat{I}} \nabla_{\nu}\fiu{\phi}{\hat{J}} .
+\eea
+\ese
+What these show us, for example, is that it is the $\phi^{\bar{I}}$-fields which causes the energy-density not to be specified purely in terms of the Lagrangian density. Also, the deviation of the pressure from being simply determined by the Lagrangian is caused by the $\fiu{\phi}{\hat{I}}$-fields.
+
+
+\section{Scalars formed from the kinetic matrix}
+In the same way that we are prejudiced against     Lorentz indices floating without a contracting partner, we can also ask that no ``field''-type indices are left floating without a corresponding partner. What this means, for example, is that a corresponding Lagrangian can't be a function of $\fiu{\phi}{I}$-alone, but instead of quantities like $\fiu{\phi}{I}\fid{\phi}{I}$.
+
+In order to move the field-type indices we are forced to introduce some rank-2 symmetric tensor, $\fid{G}{IJ}$, say which plays the role of a metric in the sense that it raises and lowers indices (although dosen't nessecarily come with all the additional properties that the space-time metric also has).
+
+
+\subsection{Lorentz invariant case}
+
+There is a maximum number of independent scalar combinations one can form out of the kinetic matrix alone. The Cayley-Hamilton theorem tells us that if there are $q$-scalars then there are $q$-scalar combinations of $\fiu{X}{IJ}$  one can form, since $\fiu{X}{IJ}$ is a $q\times q$ symmetric matrix. A few of these are
+\bea
+[\rbm{X}] \defn \fiu{X}{I}{}\fid{}{I} = \fid{G}{IJ}\fiu{X}{IJ},\qquad [\rbm{X}^2]\defn {\fiu{X}{IJ}}\fid{X}{IJ} =\fid{G}{IK}\fid{G}{JL}\fiu{X}{IJ}\fiu{X}{KL}
+\eea
+We will  denote the traces as
+\bea
+I_{[n]} \defn [\rbm{X}^n],
+\eea
+and so the Lagrangian density for $q$-scalars is a function with $q$-arguments:
+\bea
+\ld = \ld(I_{[1]}, \ldots, I_{[q]}).
+\eea
+\bea
+\pd{I_{[1]}}{\fiu{X}{IJ}} =\fid{G}{IJ},\qquad  \pd{I_{[2]}}{\fiu{X}{IJ}} = 2 \fid{X}{IJ} = 2\fid{G}{IK}\fid{G}{JL}\fiu{X}{KL}.
+\eea
+\subsection{Lorentz violating case}
+The kinetic matrix and vector in the Lorentz violating case can also be used to form scalars; a relevant list is of the form
+\bea
+\mathbb{X}^I{}_{I}\qquad \fiu{\mathbb{X}}{IJ}\mathbb{X}{}_{IJ},\qquad \fiu{\mathbb{X}}{IJ}\mathbb{X}^K{}_{J}\mathbb{X}{}_{KI},\qquad \ldots, \qquad  \fiu{\mathbb{X}}{IJ}\mathbb{Y}{}_I \mathbb{Y}{}_J ,\qquad \fiu{\mathbb{Y}}{I}\mathbb{Y}{}_I.
+\eea
+The ``$\ldots$'' stands for the  list of possible (and unique) higher-order terms in contractions of $\mathbb{X}{}_{IJ}$; one should note that there are only $n$ unique terms of this kind for $n$ scalars.
+\section{Lagrangian for perturbations}
+The Lagrangian for perturbations of a theory which contains an arbitrary number of scalars, $\fiu{\phi}{I}$, their space-time derivatives $\nabla_{\mu}\fiu{\phi}{I}$, and the metric is given by
+\bea
+\sol &=& \mathcal{A}_{IJ} \lp\fiu{\phi}{I} \lp\fiu{\phi}{J} + {\mathcal{B}^{\mu}}_{IJ}\lp\phi ^I \nabla_{\mu}\lp \fiu{\phi}{J} + {\mathcal{C}^{\mu\nu}}_{IJ} \nabla_{\mu}\lp \fiu{\phi}{I}\nabla_{\nu}\lp\fiu{\phi}{J}\nonumber\\
+&& + {\mathcal{E}^{\mu\nu}}_I\lp\fiu{\phi}{I} \lp g_{\mu\nu} + {\mathcal{D}^{\mu\alpha\beta}}_I\nabla_{\mu}\lp\fiu{\phi}{I} \lp g_{\alpha\beta} + \mathcal{F}^{\mu\nu\alpha\beta}\lp g_{\mu\nu}\lp g_{\alpha\beta}.
+\eea
+There are six ``classes'' of coupling-tensors here: $\{ \mathcal{A}_{IJ}, \ldots, \mathcal{F}^{\mu\nu\alpha\beta}\}$. 
+\appendix
+\section{Appendix}
+\bse
+\label{eq:sec:identities-useful}
+\bea
+\label{eq:sec:appenx-id-1}
+\lp u^{\mu} &=& \tfrac{1}{2}u^{\mu}u^{\alpha}u^{\beta} \lp g_{\alpha\beta},
+\eea
+\bea
+\label{eq:sec:appenx-id-2}
+\lp u_{\mu} &=& ({\gamma^{\alpha}}_{\mu} - \tfrac{1}{2}u_{\mu}u^{\alpha})u^{\beta} \lp g_{\alpha\beta},
+\eea
+\bea
+\label{eq:sec:appenx-id-3}
+\lp \gamma_{\mu\nu} &=&  \lp g_{ \mu\nu} + 2 u_{(\mu} ({\gamma^{\alpha}}_{\nu)} - \tfrac{1}{2}u_{\nu)}u^{\alpha})u^{\beta} \lp g_{\alpha\beta},\nonumber\\
+\eea
+\bea
+\lp g^{ \mu\nu} &=& - g^{\mu\alpha}g^{\beta\nu}\lp g_{\alpha\beta},
+\eea
+\bea
+\label{eq:sec:appenx-id-5}
+\lp \cs{\alpha}{\mu}{\nu} &=& g^{\alpha\beta}(\nabla_{(\mu}\lp g_{\nu)\beta} - \tfrac{1}{2}\nabla_{\beta}\lp g_{\mu\nu}).
+\eea
+\ese
+\end{document}
+
